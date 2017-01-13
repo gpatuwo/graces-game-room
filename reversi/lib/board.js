@@ -27,20 +27,32 @@ function Board () {
   this.grid = _makeGrid();
 }
 
+/**
+ * Checks if a given [x, y] position is on the Board.
+ */
+Board.prototype.isValidPos = function (pos) {
+  return (pos[0]>=0 && pos[0]<8) && (pos[1]>=0 && pos[1]<8);
+};
+
+/**
+ * Returns the piece at a given position,
+ * throwing an Error if the position is invalid.
+ */
+Board.prototype.getPiece = function (pos) {
+  if (!this.isValidPos(pos)) {
+    throw new Error("not valid position :(");
+  }
+
+  return this.grid[pos[0]][pos[1]];
+};
+
 Board.DIRS = [
   [ 0,  1], [ 1,  1], [ 1,  0],
   [ 1, -1], [ 0, -1], [-1, -1],
   [-1,  0], [-1,  1]
 ];
 
-/**
- * Returns the piece at a given [x, y] position,
- * throwing an Error if the position is invalid.
- */
-Board.prototype.getPiece = function (pos) {
-};
-
-/**
+/**ujhg
  * Checks if there are any valid moves for the given color.
  */
 Board.prototype.hasMove = function (color) {
@@ -64,12 +76,6 @@ Board.prototype.isOccupied = function (pos) {
  * the black player are out of moves.
  */
 Board.prototype.isOver = function () {
-};
-
-/**
- * Checks if a given position is on the Board.
- */
-Board.prototype.isValidPos = function (pos) {
 };
 
 /**
