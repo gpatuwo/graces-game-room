@@ -12,3 +12,14 @@
 4. game over when:
   - 0 stones on ANY side
   - winner === player with most stones in store
+
+# Basics
+
+# Extras
+## Stones
+- customizable?
+  - sweatheart candies for vday
+  - cloverleaves for st patty's
+
+## AI levels
+- pick your level 
