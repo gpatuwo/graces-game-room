@@ -10,10 +10,12 @@
   - if drops last stone in own store, then go again
   - if drops last stone in an empty hole, then that stone goes to your store AND all the stones in the hole directly across from that hole
 4. game over when:
-  - 0 stones on ANY side
+  - 0 stones on EITHER side
   - winner === player with most stones in store
 
 # Basics
+- have working board (stones drop in correct holes, animation of stone movement can come later)
+- plain js vs react for ui?
 
 # Extras
 ## Stones
@@ -22,4 +24,4 @@
   - cloverleaves for st patty's
 
 ## AI levels
-- pick your level 
+- pick your level
